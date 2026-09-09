@@ -1,0 +1,31 @@
+## ====== Visual Studio Files ======
+## Cache folders and user-specific configurations
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## ====== Build Outputs ======
+## Prevents compiled binaries and temporary XAML generation files from being tracked
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+
+## ====== .NET / NuGet ======
+## Excludes local package downloads and project restoration caches
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.nuget.props
+*.nuget.targets
+
+## ====== OS Specific Files ======
+## Cleans up desktop metadata files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
