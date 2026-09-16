@@ -5,81 +5,104 @@
         Height="500"
         Width="800"
         WindowStartupLocation="CenterScreen">
-        <!-- Define a janela de forma centralizada na tela -->
+
+        <!-- Layout Botões -->
+        <Window.Resources>
+
+            <Style TargetType="Button">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="10">
+
+                                <ContentPresenter
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+
+                <Setter Property="Background" Value="#E9ECEF"/>
+                <Setter Property="BorderBrush" Value="#CCCCCC"/>
+                <Setter Property="BorderThickness" Value="1"/>
+            </Style>
+
+        </Window.Resources>
 
 
+    <!-- Define a janela de forma centralizada na tela -->
     <Grid Background="#FFF">
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="80"/>
+            <RowDefinition Height="0"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
 
 
         <!-- Topo e Titulo Principal -->
-
-        <Border Grid.Row="0"
-                Background="#B6D0E2">
-
-            <TextBlock Text="ECOSORT - LIXEIRA INTELIGENTE"
-                       Foreground="White"
-                       FontSize="24"
-                       FontWeight="Bold"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
-
-        </Border>
+        <TextBlock VerticalAlignment="Top" Text="ECOSORT" RenderTransformOrigin="0.424,1.503" Margin="229,84,0,0" HorizontalAlignment="Left" FontSize="72" FontFamily="Century Gothic" Foreground="black" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="410,156,0,0" VerticalAlignment="Top" Text="INTELIGENTE" RenderTransformOrigin="0.424,1.503" Opacity="0.67" FontSize="24" FontWeight="Bold" Foreground="black" Grid.Row="1"/>
+        <TextBlock Margin="233,156,0,0" VerticalAlignment="Top" Text="LIXEIRA" RenderTransformOrigin="0.424,1.503" Opacity="0.67" HorizontalAlignment="Left" FontSize="24" FontWeight="Bold" Foreground="black" Grid.Row="1"/>
+        <Label Content="♻️" HorizontalAlignment="Center" VerticalAlignment="Top" Width="auto" FontSize="200" Grid.RowSpan="2" FontFamily="Segoe UI Variable Text Semibold" Opacity="0.145"/>
 
 
+        
         <!-- Seção de opções -->
-
         <StackPanel Grid.Row="1"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Width="350">
+                    HorizontalAlignment="Left"
+                    Width="651" Margin="71,270,0,24">
 
-            <TextBlock Text="Seja bem-vindo ao EcoSort"
-                       FontSize="26"
-                       FontWeight="Bold"
-                       HorizontalAlignment="Center"
-                       Margin="0,0,0,10"/>
+            <Button x:Name="BtnIniciar"
+                    Content="Iniciar"
+                    Height="42"
+                    Width="150"
+                    FontSize="18"
+                    Click="BtnIniciar_Click"/>
+            
+            <UniformGrid x:Name="Opcoes"
+                         Visibility="Collapsed"
+                         Columns="3"
+                         Width="650"
+                         Height="83">
 
-            <TextBlock Text="Selecione uma opção para acessar o sistema."
-                       FontSize="15"
-                       HorizontalAlignment="Center"
-                       Margin="0,0,0,30"/>
-
-
-            <Button Content="Cadastro de Lixeiras"
-                    Height="50"
-                    Margin="0,5"
-                    FontSize="16"/>
-
-            <Button Content="Cadastro de Resíduos"
-                    Height="50"
-                    Margin="0,5"
-                    FontSize="16"/>
-
-            <Button Content="Consultar Registros"
-                    Height="50"
-                    Margin="0,5"
-                    FontSize="16"/>
-
+                <Button x:Name="BtnCadastroLixeira"
+                        Content="Cadastro de Lixeiras"
+                        Height="50"
+                        Margin="10"
+                        FontSize="14"/>
+                
+                <Button x:Name="BtnCadastroResiduos"
+                        Content="Cadastro de Resíduos"
+                        Height="50"
+                        Margin="10"
+                        FontSize="14"/>
+                
+                <Button x:Name="BtnCadastroRegistros"
+                        Content="Cadastro de Registros"
+                        Height="50"
+                        Margin="10"
+                        FontSize="14"/>
+                
+            </UniformGrid>
         </StackPanel>
 
 
         <!-- Rodapé -->
-
         <Border Grid.Row="2"
-                Background="#DDDDDD">
+                Background="#e9ecef">
 
             <TextBlock Text="Mini TCC - João Paulo, Enzo, Crystian, Bruno Yugue"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
                        Foreground="Gray"/>
-
         </Border>
+        
 
     </Grid>
 

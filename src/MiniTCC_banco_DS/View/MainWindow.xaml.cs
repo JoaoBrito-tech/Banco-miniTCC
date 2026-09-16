@@ -24,5 +24,20 @@ namespace MiniTCC_banco_DS.View
         {
             InitializeComponent();
         }
+
+        private void BtnIniciar_Click(object sender, RoutedEventArgs e)
+        {
+            if (Opcoes.Visibility == Visibility.Collapsed)
+            {
+                Opcoes.Visibility = Visibility.Visible;
+                BtnIniciar.Content = "Fechar";
+            }
+            else
+            {
+                Opcoes.Visibility = Visibility.Collapsed;
+                BtnIniciar.Content = "Iniciar";
+            }
+        }
     }
+
 }

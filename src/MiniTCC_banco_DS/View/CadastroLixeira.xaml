@@ -6,7 +6,56 @@
         xmlns:local="clr-namespace:MiniTCC_banco_DS.View"
         mc:Ignorable="d"
         Title="CadastroLixeira" Height="450" Width="800">
-    <Grid>
-        
+    <Grid RenderTransformOrigin="0.5,0.5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="131*"/>
+            <RowDefinition Height="86*"/>
+        </Grid.RowDefinitions>
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-0.043"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+
+        <!-- Titulo Principal e Fundo-->
+        <TextBlock HorizontalAlignment="Left" Margin="27,34,0,0" VerticalAlignment="Top" Text="LIXEIRAS" RenderTransformOrigin="0.424,1.503" Opacity="0.67" FontSize="50" FontWeight="Bold" Foreground="black"/>
+        <TextBlock Margin="29,27,0,0" VerticalAlignment="Top" Text="CADASTRO" RenderTransformOrigin="0.424,1.503" Opacity="0.67" HorizontalAlignment="Left" FontSize="20" FontWeight="Bold" Foreground="black"/>
+        <TextBlock Margin="211,26,0,0" VerticalAlignment="Top" Text="DE" RenderTransformOrigin="0.424,1.503" Opacity="0.67" HorizontalAlignment="Left" FontSize="20" FontWeight="Bold" Foreground="black"/>
+        <Label Content="♻️" Height="auto" VerticalAlignment="Top" HorizontalAlignment="Center" Width="auto" FontSize="350" FontFamily="Segoe UI Variable Text Semibold" Opacity="0.030" Margin="0,-37,0,0" Grid.RowSpan="2" />
+
+        <!-- Botão Voltar -->
+        <Button x:Name="BtnVoltar" Content="Voltar" HorizontalAlignment="Left" Height="24" Margin="40,77,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
+
+
+        <!-- Inserção de Dados -->
+        <Label Content="ID:" HorizontalAlignment="Left" Margin="299,186,0,0" VerticalAlignment="Top" Width="110"/>
+        <Label Content="NOME:" HorizontalAlignment="Left" Margin="299,139,0,0" VerticalAlignment="Top" Width="110"/>
+        <Label Content="LOCALIZAÇÃO:" HorizontalAlignment="Left" Margin="299,32,0,0" VerticalAlignment="Top" Width="110" Grid.Row="1"/>
+        <Label Content="STATUS:" HorizontalAlignment="Left" Margin="299,247,0,0" VerticalAlignment="Top" Width="110" Grid.RowSpan="2"/>
+
+        <TextBox HorizontalAlignment="Left" Margin="304,171,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" BorderBrush="Black"/>
+        <TextBox HorizontalAlignment="Left" Margin="304,16,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Grid.Row="1" BorderBrush="Black"/>
+        <TextBox HorizontalAlignment="Left" Margin="304,218,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" BorderBrush="Black"/>
+        <TextBox HorizontalAlignment="Left" Margin="304,63,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Grid.Row="1" BorderBrush="Black"/>
+
+        <!-- Envio/Exclusão de Dados-->
+        <Button x:Name="BtnEnviar" Content="Enviar" HorizontalAlignment="Left" Height="24" Margin="429,90,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="BtnApagar" Content="Apagar" HorizontalAlignment="Left" Height="24" Margin="304,90,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
+
+
+        <!-- Rodapé -->
+        <Border Background="#e9ecef" Margin="1,131,-1,1" Grid.Row="1">
+
+            <TextBlock Text="Mini TCC - João Paulo, Enzo Basso, Crystian Leonardo, Bruno Yugue"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Foreground="Gray"/>
+
+        </Border>
+
+
     </Grid>
 </Window>

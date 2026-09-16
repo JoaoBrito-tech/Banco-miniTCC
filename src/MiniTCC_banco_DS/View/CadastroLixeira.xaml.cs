@@ -23,5 +23,10 @@ namespace MiniTCC_banco_DS.View
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
