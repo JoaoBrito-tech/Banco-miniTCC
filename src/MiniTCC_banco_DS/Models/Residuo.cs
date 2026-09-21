@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace MiniTCC_banco_DS.Models
 {
-    internal class Residuo
+    public class Residuo
     {
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string Tipo { get; set; }
+        public DateTime DataHora { get; set; } = DateTime.Now;
+        public int ConfiancaIdentificacao { get; set; }
     }
 }

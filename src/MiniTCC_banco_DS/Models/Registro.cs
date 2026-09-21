@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace MiniTCC_banco_DS.Models
 {
-    internal class Registro
+    public class Registro
     {
+        public int Id { get; set; }
+        public DateTime DataHora { get; set; } = DateTime.Now;
+        public string Resultado { get; set; }
+
     }
 }

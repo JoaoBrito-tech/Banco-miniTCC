@@ -94,7 +94,7 @@
     <Compile Include="Models\Lixeira.cs" />
     <Compile Include="Models\Registro.cs" />
     <Compile Include="Models\Residuo.cs" />
-    <Compile Include="Models\Tipo_residuo.cs" />
+    <Compile Include="Models\TipoResiduo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

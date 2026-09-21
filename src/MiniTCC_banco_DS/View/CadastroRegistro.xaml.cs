@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MiniTCC_banco_DS.Models;
 
 namespace MiniTCC_banco_DS.View
 {
@@ -23,11 +24,20 @@ namespace MiniTCC_banco_DS.View
         {
             InitializeComponent();
         }
+
+        private void BtnEnviar_Click(object sender, RoutedEventArgs e)
+        {
+            var registro = new Registro
+            {
+                // nao entendi qq é pra fazer aqui
+            };
+        }
         private void BtnVoltar_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();
         }
+
     }
 }

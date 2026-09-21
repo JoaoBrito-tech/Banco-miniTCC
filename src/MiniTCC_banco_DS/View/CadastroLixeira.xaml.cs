@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MiniTCC_banco_DS.Models;
 
 namespace MiniTCC_banco_DS.View
 {
@@ -24,8 +25,15 @@ namespace MiniTCC_banco_DS.View
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BtnEnviar_Click(object sender, RoutedEventArgs e)
         {
+            var lixeira = new Lixeira
+            {
+                Id = int.Parse(TxtId.Text),
+                Nome = TxtNome.Text,
+                Localizacao = TxtLocalizacao.Text,
+                Status = TxtStatus.Text,
+            };
 
         }
 
@@ -35,5 +43,6 @@ namespace MiniTCC_banco_DS.View
             mainWindow.Show();
             this.Close();
         }
+
     }
 }
