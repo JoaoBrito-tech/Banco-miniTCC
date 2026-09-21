@@ -20,9 +20,11 @@ namespace MiniTCC_banco_DS.View
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
         private void BtnIniciar_Click(object sender, RoutedEventArgs e)
@@ -37,6 +39,27 @@ namespace MiniTCC_banco_DS.View
                 Opcoes.Visibility = Visibility.Collapsed;
                 BtnIniciar.Content = "Iniciar";
             }
+        }
+
+        private void BtnCadastroLixeira_Click(object sender, RoutedEventArgs e)
+        {
+            CadastroLixeira cadastroLixeira = new CadastroLixeira(); //mudar de pagina
+            cadastroLixeira.Show();
+            this.Close();
+        }
+
+        private void BtnCadastroResiduos_Click(object sender, RoutedEventArgs e)
+        {
+            CadastroResiduo cadastroResiduos = new CadastroResiduo();
+            cadastroResiduos.Show();
+            this.Close();
+        }
+
+        private void BtnCadastroRegistros_Click(object sender, RoutedEventArgs e)
+        {
+            CadastroRegistro cadastroRegistros = new CadastroRegistro();
+            cadastroRegistros.Show();
+            this.Close();
         }
     }
 

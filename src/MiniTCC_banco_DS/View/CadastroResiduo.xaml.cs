@@ -23,5 +23,13 @@ namespace MiniTCC_banco_DS.View
         {
             InitializeComponent();
         }
+   
+
+        private void BtnVoltar_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
+        }
     }
 }

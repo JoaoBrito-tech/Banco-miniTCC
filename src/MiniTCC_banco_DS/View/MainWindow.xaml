@@ -6,33 +6,33 @@
         Width="800"
         WindowStartupLocation="CenterScreen">
 
-        <!-- Layout Botões -->
-        <Window.Resources>
+    <!-- Layout Botões -->
+    <Window.Resources>
 
-            <Style TargetType="Button">
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="Button">
-                            <Border
+        <Style TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             CornerRadius="10">
 
-                                <ContentPresenter
+                            <ContentPresenter
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
 
-                <Setter Property="Background" Value="#E9ECEF"/>
-                <Setter Property="BorderBrush" Value="#CCCCCC"/>
-                <Setter Property="BorderThickness" Value="1"/>
-            </Style>
+            <Setter Property="Background" Value="#E9ECEF"/>
+            <Setter Property="BorderBrush" Value="#CCCCCC"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
 
-        </Window.Resources>
+    </Window.Resources>
 
 
     <!-- Define a janela de forma centralizada na tela -->
@@ -52,11 +52,12 @@
         <Label Content="♻️" HorizontalAlignment="Center" VerticalAlignment="Top" Width="auto" FontSize="200" Grid.RowSpan="2" FontFamily="Segoe UI Variable Text Semibold" Opacity="0.145"/>
 
 
-        
+
         <!-- Seção de opções -->
         <StackPanel Grid.Row="1"
                     HorizontalAlignment="Left"
-                    Width="651" Margin="71,270,0,24">
+                    Width="651" Margin="70,265,0,29"
+                    >
 
             <Button x:Name="BtnIniciar"
                     Content="Iniciar"
@@ -64,7 +65,7 @@
                     Width="150"
                     FontSize="18"
                     Click="BtnIniciar_Click"/>
-            
+
             <UniformGrid x:Name="Opcoes"
                          Visibility="Collapsed"
                          Columns="3"
@@ -75,20 +76,20 @@
                         Content="Cadastro de Lixeiras"
                         Height="50"
                         Margin="10"
-                        FontSize="14"/>
-                
+                        FontSize="14" Click="BtnCadastroLixeira_Click"/>
+
                 <Button x:Name="BtnCadastroResiduos"
                         Content="Cadastro de Resíduos"
                         Height="50"
                         Margin="10"
-                        FontSize="14"/>
-                
+                        FontSize="14" Click="BtnCadastroResiduos_Click"/>
+
                 <Button x:Name="BtnCadastroRegistros"
                         Content="Cadastro de Registros"
                         Height="50"
                         Margin="10"
-                        FontSize="14"/>
-                
+                        FontSize="14" Click="BtnCadastroRegistros_Click"/>
+
             </UniformGrid>
         </StackPanel>
 
@@ -102,7 +103,7 @@
                        VerticalAlignment="Center"
                        Foreground="Gray"/>
         </Border>
-        
+
 
     </Grid>
 
