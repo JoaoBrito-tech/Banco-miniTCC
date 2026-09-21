@@ -1,0 +1,110 @@
+﻿<Window x:Class="MiniTCC_banco_DS.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Sistema de Controle de Resíduos"
+        Height="500"
+        Width="800"
+        WindowStartupLocation="CenterScreen">
+
+    <!-- Layout Botões -->
+    <Window.Resources>
+
+        <Style TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="10">
+
+                            <ContentPresenter
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Setter Property="Background" Value="#E9ECEF"/>
+            <Setter Property="BorderBrush" Value="#CCCCCC"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+
+    </Window.Resources>
+
+
+    <!-- Define a janela de forma centralizada na tela -->
+    <Grid Background="#FFF">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+
+        <!-- Topo e Titulo Principal -->
+        <TextBlock VerticalAlignment="Top" Text="ECOSORT" RenderTransformOrigin="0.424,1.503" Margin="229,84,0,0" HorizontalAlignment="Left" FontSize="72" FontFamily="Century Gothic" Foreground="black" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="410,156,0,0" VerticalAlignment="Top" Text="INTELIGENTE" RenderTransformOrigin="0.424,1.503" Opacity="0.67" FontSize="24" FontWeight="Bold" Foreground="black" Grid.Row="1"/>
+        <TextBlock Margin="233,156,0,0" VerticalAlignment="Top" Text="LIXEIRA" RenderTransformOrigin="0.424,1.503" Opacity="0.67" HorizontalAlignment="Left" FontSize="24" FontWeight="Bold" Foreground="black" Grid.Row="1"/>
+        <Label Content="♻️" HorizontalAlignment="Center" VerticalAlignment="Top" Width="auto" FontSize="200" Grid.RowSpan="2" FontFamily="Segoe UI Variable Text Semibold" Opacity="0.145"/>
+
+
+
+        <!-- Seção de opções -->
+        <StackPanel Grid.Row="1"
+                    HorizontalAlignment="Left"
+                    Width="651" Margin="70,265,0,29"
+                    >
+
+            <Button x:Name="BtnIniciar"
+                    Content="Iniciar"
+                    Height="42"
+                    Width="150"
+                    FontSize="18"
+                    Click="BtnIniciar_Click"/>
+
+            <UniformGrid x:Name="Opcoes"
+                         Visibility="Collapsed"
+                         Columns="3"
+                         Width="650"
+                         Height="83">
+
+                <Button x:Name="BtnCadastroLixeira"
+                        Content="Cadastro de Lixeiras"
+                        Height="50"
+                        Margin="10"
+                        FontSize="14" Click="BtnCadastroLixeira_Click"/>
+
+                <Button x:Name="BtnCadastroResiduos"
+                        Content="Cadastro de Resíduos"
+                        Height="50"
+                        Margin="10"
+                        FontSize="14" Click="BtnCadastroResiduos_Click"/>
+
+                <Button x:Name="BtnCadastroRegistros"
+                        Content="Cadastro de Registros"
+                        Height="50"
+                        Margin="10"
+                        FontSize="14" Click="BtnCadastroRegistros_Click"/>
+
+            </UniformGrid>
+        </StackPanel>
+
+
+        <!-- Rodapé -->
+        <Border Grid.Row="2"
+                Background="#e9ecef">
+
+            <TextBlock Text="Mini TCC - João Paulo, Enzo, Crystian, Bruno Yugue"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Foreground="Gray"/>
+        </Border>
+
+
+    </Grid>
+
+</Window>
