@@ -71,6 +71,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="View\SaidaFinal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -89,6 +93,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="View\SaidaFinal.xaml.cs">
+      <DependentUpon>SaidaFinal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dados\Repositorio.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Compartimento.cs" />

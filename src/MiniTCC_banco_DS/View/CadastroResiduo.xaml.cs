@@ -1,16 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
+using MiniTCC_banco_DS.Dados;
 using MiniTCC_banco_DS.Models;
 
 namespace MiniTCC_banco_DS.View
@@ -27,15 +16,45 @@ namespace MiniTCC_banco_DS.View
 
         private void BtnEnviar_Click(object sender, RoutedEventArgs e)
         {
+            if (!int.TryParse(TxtId.Text, out int id))
+            {
+                MessageBox.Show("Informe um ID válido (número inteiro).", "Dados inválidos", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(TxtNome.Text))
+            {
+                MessageBox.Show("Informe o nome do resíduo.", "Dados inválidos", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            if (CmbTipo.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione o tipo do resíduo.", "Dados inválidos", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            if (!int.TryParse(TxtConf.Text, out int confianca))
+            {
+                MessageBox.Show("Informe um código de identificação válido (número inteiro).", "Dados inválidos", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
             var residuo = new Residuo
             {
-                Id = int.Parse(TxtId.Text),
-                Nome = TxtNome.Text,
+                Id = id,
+                Nome = TxtNome.Text.Trim(),
                 Tipo = CmbTipo.Text,
-                ConfiancaIdentificacao = int.Parse(TxtConf.Text),
+                ConfiancaIdentificacao = confianca,
             };
-      
-            MessageBox.Show($"Registro concluído!\nID: {residuo.Id}\nNome: {residuo.Nome}\nTipo: {residuo.Tipo}\nCódigo: {residuo.ConfiancaIdentificacao}\nHorário: {residuo.DataHora}\n\nClique em OK para ver qual a lixeira apropriada.", "Registro concluído", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            Repositorio.SalvarResiduo(residuo);
+
+            MessageBox.Show(
+                $"Resíduo cadastrado com sucesso!\nID: {residuo.Id}\nNome: {residuo.Nome}\nTipo: {residuo.Tipo}\nCódigo: {residuo.ConfiancaIdentificacao}\nHorário: {residuo.DataHora}",
+                "Cadastro concluído", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            LimparCampos();
         }
 
         private void BtnVoltar_Click_1(object sender, RoutedEventArgs e)
@@ -47,7 +66,29 @@ namespace MiniTCC_banco_DS.View
 
         private void BtnApagar_Click(object sender, RoutedEventArgs e)
         {
+            if (!int.TryParse(TxtId.Text, out int id))
+            {
+                MessageBox.Show("Informe o ID do resíduo que deseja apagar.", "ID inválido", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
 
+            if (Repositorio.RemoverResiduo(id))
+            {
+                MessageBox.Show("Resíduo removido com sucesso.", "Removido", MessageBoxButton.OK, MessageBoxImage.Information);
+                LimparCampos();
+            }
+            else
+            {
+                MessageBox.Show("Nenhum resíduo encontrado com esse ID.", "Não encontrado", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
+
+        private void LimparCampos()
+        {
+            TxtId.Text = string.Empty;
+            TxtNome.Text = string.Empty;
+            TxtConf.Text = string.Empty;
+            CmbTipo.SelectedIndex = -1;
         }
     }
 }

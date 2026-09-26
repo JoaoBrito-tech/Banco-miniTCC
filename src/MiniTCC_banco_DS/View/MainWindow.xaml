@@ -68,9 +68,9 @@
 
             <UniformGrid x:Name="Opcoes"
                          Visibility="Collapsed"
-                         Columns="3"
+                         Columns="2"
                          Width="650"
-                         Height="83">
+                         Height="140">
 
                 <Button x:Name="BtnCadastroLixeira"
                         Content="Cadastro de Lixeiras"
@@ -89,6 +89,12 @@
                         Height="50"
                         Margin="10"
                         FontSize="14" Click="BtnCadastroRegistros_Click"/>
+
+                <Button x:Name="BtnSaidaFinal"
+                        Content="Saída Final"
+                        Height="50"
+                        Margin="10"
+                        FontSize="14" Click="BtnSaidaFinal_Click"/>
 
             </UniformGrid>
         </StackPanel>

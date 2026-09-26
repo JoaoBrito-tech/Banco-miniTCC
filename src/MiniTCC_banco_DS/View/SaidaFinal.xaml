@@ -1,0 +1,103 @@
+﻿<Window x:Class="MiniTCC_banco_DS.View.SaidaFinal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d"
+        Title="Saída Final" Height="560" Width="980"
+        MinHeight="480" MinWidth="760"
+        WindowStartupLocation="CenterScreen"
+        Background="White">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <!-- Cabeçalho -->
+        <StackPanel Grid.Row="0" Margin="30,22,30,12">
+            <TextBlock Text="SAÍDA FINAL" FontSize="32" FontWeight="Bold" Foreground="#212529"/>
+            <TextBlock Text="Resumo de tudo o que foi cadastrado no sistema" FontSize="13" Foreground="Gray" Margin="0,2,0,0"/>
+        </StackPanel>
+
+        <!-- três colunas, uma para cada tipo de dado -->
+        <Grid Grid.Row="1" Margin="30,0,30,12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- LIXEIRAS -->
+            <Border Grid.Column="0" Margin="0,0,8,0" Background="#F8F9FA" CornerRadius="8" BorderBrush="#DEE2E6" BorderThickness="1">
+                <DockPanel Margin="14">
+                    <TextBlock DockPanel.Dock="Top" Text="LIXEIRAS" FontWeight="Bold" FontSize="16" Foreground="#212529"/>
+                    <TextBlock x:Name="TxtTotalLixeiras" DockPanel.Dock="Top" Text="Total: 0" FontSize="12" Foreground="Gray" Margin="0,2,0,10"/>
+                    <DataGrid x:Name="GridLixeiras"
+                              AutoGenerateColumns="False" IsReadOnly="True"
+                              HeadersVisibility="Column" GridLinesVisibility="Horizontal"
+                              RowHeight="26" FontSize="11" BorderThickness="0"
+                              Background="Transparent" CanUserAddRows="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="30"/>
+                            <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Width="*"/>
+                            <DataGridTextColumn Header="Localização" Binding="{Binding Localizacao}" Width="*"/>
+                            <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="55"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+            </Border>
+
+            <!-- RESÍDUOS -->
+            <Border Grid.Column="1" Margin="8,0,8,0" Background="#F8F9FA" CornerRadius="8" BorderBrush="#DEE2E6" BorderThickness="1">
+                <DockPanel Margin="14">
+                    <TextBlock DockPanel.Dock="Top" Text="RESÍDUOS" FontWeight="Bold" FontSize="16" Foreground="#212529"/>
+                    <TextBlock x:Name="TxtTotalResiduos" DockPanel.Dock="Top" Text="Total: 0" FontSize="12" Foreground="Gray" Margin="0,2,0,10"/>
+                    <DataGrid x:Name="GridResiduos"
+                              AutoGenerateColumns="False" IsReadOnly="True"
+                              HeadersVisibility="Column" GridLinesVisibility="Horizontal"
+                              RowHeight="26" FontSize="11" BorderThickness="0"
+                              Background="Transparent" CanUserAddRows="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="30"/>
+                            <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Width="*"/>
+                            <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo}" Width="55"/>
+                            <DataGridTextColumn Header="Confiança" Binding="{Binding ConfiancaIdentificacao}" Width="60"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+            </Border>
+
+            <!-- REGISTROS -->
+            <Border Grid.Column="2" Margin="8,0,0,0" Background="#F8F9FA" CornerRadius="8" BorderBrush="#DEE2E6" BorderThickness="1">
+                <DockPanel Margin="14">
+                    <TextBlock DockPanel.Dock="Top" Text="REGISTROS" FontWeight="Bold" FontSize="16" Foreground="#212529"/>
+                    <TextBlock x:Name="TxtTotalRegistros" DockPanel.Dock="Top" Text="Total: 0" FontSize="12" Foreground="Gray" Margin="0,2,0,10"/>
+                    <DataGrid x:Name="GridRegistros"
+                              AutoGenerateColumns="False" IsReadOnly="True"
+                              HeadersVisibility="Column" GridLinesVisibility="Horizontal"
+                              RowHeight="26" FontSize="11" BorderThickness="0"
+                              Background="Transparent" CanUserAddRows="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="30"/>
+                            <DataGridTextColumn Header="Data/Hora" Binding="{Binding DataHora}" Width="*"/>
+                            <DataGridTextColumn Header="Resultado" Binding="{Binding Resultado}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+            </Border>
+        </Grid>
+
+        <!-- Rodapé -->
+        <Border Grid.Row="2" Background="#e9ecef">
+            <Grid>
+                <Button x:Name="BtnVoltar" Content="Voltar" HorizontalAlignment="Left" Width="75" Height="24" Margin="15,0,0,0" Click="BtnVoltar_Click"/>
+                <TextBlock Text="Mini TCC - João Paulo, Enzo Basso, Crystian Leonardo, Bruno Yugue"
+                           HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Gray"/>
+                <Button x:Name="BtnAtualizar" Content="Atualizar" HorizontalAlignment="Right" Width="75" Height="24" Margin="0,0,15,0" Click="BtnAtualizar_Click"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

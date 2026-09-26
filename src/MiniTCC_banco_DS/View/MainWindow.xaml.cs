@@ -61,6 +61,13 @@ namespace MiniTCC_banco_DS.View
             cadastroRegistros.Show();
             this.Close();
         }
+
+        private void BtnSaidaFinal_Click(object sender, RoutedEventArgs e)
+        {
+            SaidaFinal saidaFinal = new SaidaFinal();
+            saidaFinal.Show();
+            this.Close();
+        }
     }
 
 }
