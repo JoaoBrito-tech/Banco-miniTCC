@@ -31,9 +31,11 @@ namespace MiniTCC_banco_DS.View
             {
                 Id = int.Parse(TxtId.Text),
                 Nome = TxtNome.Text,
-                Tipo = TxtTipo.Text,
+                Tipo = CmbTipo.Text,
                 ConfiancaIdentificacao = int.Parse(TxtConf.Text),
             };
+      
+            MessageBox.Show($"Registro concluído!\nID: {residuo.Id}\nNome: {residuo.Nome}\nTipo: {residuo.Tipo}\nCódigo: {residuo.ConfiancaIdentificacao}\nHorário: {residuo.DataHora}\n\nClique em OK para ver qual a lixeira apropriada.", "Registro concluído", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void BtnVoltar_Click_1(object sender, RoutedEventArgs e)

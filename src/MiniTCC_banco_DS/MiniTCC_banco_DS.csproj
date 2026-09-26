@@ -75,6 +75,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Models\ExemploLixeira.cs" />
     <Compile Include="View\CadastroLixeira.xaml.cs">
       <DependentUpon>CadastroLixeira.xaml</DependentUpon>
     </Compile>

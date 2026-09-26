@@ -32,7 +32,7 @@ namespace MiniTCC_banco_DS.View
                 Id = int.Parse(TxtId.Text),
                 Nome = TxtNome.Text,
                 Localizacao = TxtLocalizacao.Text,
-                Status = TxtStatus.Text,
+                Status = "Ativa",
             };
 
         }
