@@ -46,18 +46,55 @@
 
 
         <!-- Topo e Titulo Principal -->
-        <TextBlock VerticalAlignment="Top" Text="ECOSORT" RenderTransformOrigin="0.424,1.503" Margin="229,84,0,0" HorizontalAlignment="Left" FontSize="72" FontFamily="Century Gothic" Foreground="black" Grid.Row="1"/>
-        <TextBlock HorizontalAlignment="Left" Margin="410,156,0,0" VerticalAlignment="Top" Text="INTELIGENTE" RenderTransformOrigin="0.424,1.503" Opacity="0.67" FontSize="24" FontWeight="Bold" Foreground="black" Grid.Row="1"/>
-        <TextBlock Margin="233,156,0,0" VerticalAlignment="Top" Text="LIXEIRA" RenderTransformOrigin="0.424,1.503" Opacity="0.67" HorizontalAlignment="Left" FontSize="24" FontWeight="Bold" Foreground="black" Grid.Row="1"/>
-        <Label Content="♻️" HorizontalAlignment="Center" VerticalAlignment="Top" Width="auto" FontSize="200" Grid.RowSpan="2" FontFamily="Segoe UI Variable Text Semibold" Opacity="0.145"/>
+        <TextBlock VerticalAlignment="Top"
+                   Text="ECOSORT"
+                   RenderTransformOrigin="0.424,1.503"
+                   Margin="229,69,0,0"
+                   HorizontalAlignment="Left"
+                   FontSize="72"
+                   FontFamily="Century Gothic"
+                   Foreground="black"
+                   Grid.Row="1"/>
+
+        <TextBlock HorizontalAlignment="Left"
+                   Margin="410,141,0,0"
+                   VerticalAlignment="Top"
+                   Text="INTELIGENTE"
+                   RenderTransformOrigin="0.424,1.503"
+                   Opacity="0.67"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   Foreground="black"
+                   Grid.Row="1"/>
+
+        <TextBlock Margin="233,141,0,0"
+                   VerticalAlignment="Top"
+                   Text="LIXEIRA"
+                   RenderTransformOrigin="0.424,1.503"
+                   Opacity="0.67"
+                   HorizontalAlignment="Left"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   Foreground="black"
+                   Grid.Row="1"/>
+
+        <Label Content="♻️"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Top"
+               Width="auto"
+               FontSize="200"
+               Margin="0,-20,0,0"
+               Grid.RowSpan="2"
+               FontFamily="Segoe UI Variable Text Semibold"
+               Opacity="0.145"/>
 
 
 
         <!-- Seção de opções -->
         <StackPanel Grid.Row="1"
                     HorizontalAlignment="Left"
-                    Width="651" Margin="70,265,0,29"
-                    >
+                    Width="651"
+                    Margin="70,235,0,0">
 
             <Button x:Name="BtnIniciar"
                     Content="Iniciar"
@@ -76,25 +113,29 @@
                         Content="Cadastro de Lixeiras"
                         Height="50"
                         Margin="10"
-                        FontSize="14" Click="BtnCadastroLixeira_Click"/>
+                        FontSize="14"
+                        Click="BtnCadastroLixeira_Click"/>
 
                 <Button x:Name="BtnCadastroResiduos"
                         Content="Cadastro de Resíduos"
                         Height="50"
                         Margin="10"
-                        FontSize="14" Click="BtnCadastroResiduos_Click"/>
+                        FontSize="14"
+                        Click="BtnCadastroResiduos_Click"/>
 
                 <Button x:Name="BtnCadastroRegistros"
                         Content="Cadastro de Registros"
                         Height="50"
                         Margin="10"
-                        FontSize="14" Click="BtnCadastroRegistros_Click"/>
+                        FontSize="14"
+                        Click="BtnCadastroRegistros_Click"/>
 
                 <Button x:Name="BtnSaidaFinal"
                         Content="Saída Final"
                         Height="50"
                         Margin="10"
-                        FontSize="14" Click="BtnSaidaFinal_Click"/>
+                        FontSize="14"
+                        Click="BtnSaidaFinal_Click"/>
 
             </UniformGrid>
         </StackPanel>

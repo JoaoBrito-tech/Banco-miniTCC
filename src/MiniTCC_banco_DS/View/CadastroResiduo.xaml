@@ -24,9 +24,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="27,34,0,0" VerticalAlignment="Top" Text="RESIDUOS" RenderTransformOrigin="0.424,1.503" Opacity="0.67" FontSize="50" FontWeight="Bold" Foreground="black"/>
         <TextBlock Margin="29,27,0,0" VerticalAlignment="Top" Text="CADASTRO" RenderTransformOrigin="0.424,1.503" Opacity="0.67" HorizontalAlignment="Left" FontSize="20" FontWeight="Bold" Foreground="black"/>
         <TextBlock Margin="240,26,0,0" VerticalAlignment="Top" Text="DE" RenderTransformOrigin="0.424,1.503" Opacity="0.67" HorizontalAlignment="Left" FontSize="20" FontWeight="Bold" Foreground="black"/>
-        <Label Height="auto" VerticalAlignment="Top" HorizontalAlignment="Center" Width="auto" FontSize="350" FontFamily="Segoe UI Variable Text Semibold" Opacity="0.030" Margin="0,-51,0,0" Grid.RowSpan="2" >
-            <ComboBox Width="120"/>
-        </Label>
+        <Label Content="♻️" Height="auto" VerticalAlignment="Top" HorizontalAlignment="Center" Width="auto" FontSize="350" FontFamily="Segoe UI Variable Text Semibold" Opacity="0.030" Margin="0,-37,0,0" Grid.RowSpan="2" />
 
         <!-- Botão Voltar -->
         <Button x:Name="BtnVoltar" Content="Voltar" HorizontalAlignment="Left" Height="24" Margin="40,77,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="BtnVoltar_Click_1"/>
@@ -38,9 +36,9 @@
         <Label Content="TIPO:" HorizontalAlignment="Left" Margin="302,259,0,0" VerticalAlignment="Top" Width="110" Grid.RowSpan="2"/>
         <Label Content="CÒDIGO DE IDENTIFICAÇÃO:" HorizontalAlignment="Left" Margin="302,211,0,0" VerticalAlignment="Top" Width="193"/>
 
-        <TextBox x:Name="TxtNome" HorizontalAlignment="Left" Margin="312,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="200" BorderBrush="Black"/>
+        <TextBox x:Name="TxtNome" HorizontalAlignment="Left" Margin="312,194,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="202" BorderBrush="Black"/>
         <TextBox x:Name="TxtId" HorizontalAlignment="Left" Margin="314,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" BorderBrush="Black"/>
-        <TextBox x:Name="TxtConf" HorizontalAlignment="Left" Margin="307,242,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" BorderBrush="Black"/>
+        <TextBox x:Name="TxtConf" HorizontalAlignment="Left" Margin="307,242,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="207" BorderBrush="Black"/>
 
         <!-- Envio/Exclusão de Dados-->
         <Button x:Name="BtnEnviar" Content="Enviar" HorizontalAlignment="Left" Height="24" Margin="429,79,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="BtnEnviar_Click"/>
@@ -55,13 +53,14 @@
                 Foreground="Gray"/>
 
         </Border>
-        <ComboBox x:Name="CmbTipo" HorizontalAlignment="Left" Margin="310,29,0,0" Grid.Row="1" VerticalAlignment="Top" Width="192">
+        <ComboBox x:Name="CmbTipo" HorizontalAlignment="Left" Margin="310,29,0,0" Grid.Row="1" VerticalAlignment="Top" Width="204">
             <ComboBoxItem x:Name="Papel" Content="Papel"/>
             <ComboBoxItem x:Name="Plastico" Content="Plastico"/>
             <ComboBoxItem x:Name="Metal" Content="Metal"/>
             <ComboBoxItem x:Name="Organico" Content="Organico"/>
             <ComboBoxItem x:Name="Vidro" Content="Vidro"/>
         </ComboBox>
+       
 
 
     </Grid>
